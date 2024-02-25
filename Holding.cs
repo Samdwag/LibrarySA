@@ -9,7 +9,7 @@ namespace LibrarySA
     internal abstract class Holding
     {
         public int Id { get; set; }
-        public string Title { get; set; }   
+        public string Title { get; set; }
         public string Description { get; set; }
         public bool IsCheckedOut { get; set; }
 
@@ -40,9 +40,10 @@ namespace LibrarySA
         }
 
         public abstract string HoldingType();
+
         public override string ToString()
         {
-            return $"{Id}\t{Title}\t{Description}\t{(IsCheckedOut ? "Yes" : "No")}";
+            return $"{Id}\t{Title}\t{Description}\t{(IsCheckedOut ? "Checked Out" : "Available")}";
         }
     }
 }
